@@ -1,0 +1,91 @@
+# -*- coding: utf-8 -*-
+
+# Macro Begin: <your path for export>FreeCAD_Macro/FM2_assembly.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++
+import FreeCAD
+
+# change color of parts
+FreeCADGui.getDocument("Rendering").getObject("Part__Feature030").ShapeColor = (0.68,0.68,0.68)
+FreeCADGui.getDocument("Rendering").getObject("Part__Feature005").ShapeColor = (1.00,1.00,0.00)
+FreeCADGui.getDocument("Rendering").getObject("Part__Feature006").ShapeColor = (1.00,0.00,0.00)
+FreeCADGui.getDocument("Rendering").getObject("Part__Feature011").ShapeColor = (0.24,0.24,0.24)
+FreeCADGui.getDocument("Rendering").getObject("Part__Feature009").ShapeColor = (0.24,0.24,0.24)
+# hide all parts
+Gui.getDocument("Rendering").getObject("PinHeader_2x05_P2_54mm_Vertical").Visibility=False
+Gui.getDocument("Rendering").getObject("C_Disc_D3_0mm_W2_0mm_P2_50mm001").Visibility=False
+Gui.getDocument("Rendering").getObject("C_Disc_D3_0mm_W2_0mm_P2_50mm").Visibility=False
+Gui.getDocument("Rendering").getObject("PinHeader_1x02_P2_54mm_Vertical").Visibility=False
+Gui.getDocument("Rendering").getObject("PinHeader_1x14_P2_54mm_Vertical").Visibility=False
+Gui.getDocument("Rendering").getObject("PinHeader_1x14_P2_54mm_Vertical001").Visibility=False
+Gui.getDocument("Rendering").getObject("PinHeader_1x05_P2_54mm_Vertical").Visibility=False
+Gui.getDocument("Rendering").getObject("CIRCUIT_BOARD_TEENSY_LC_NO_MARKINGS").Visibility=False
+Gui.getDocument("Rendering").getObject("MPX7007").Visibility=False
+Gui.getDocument("Rendering").getObject("CUI_SJ_3524_SMT_TR").Visibility=False
+Gui.getDocument("Rendering").getObject("CUI_SJ_3524_SMT_TR001").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Array_SIP5").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Array_SIP5001").Visibility=False
+Gui.getDocument("Rendering").getObject("DIP_8_W7_62mm").Visibility=False
+Gui.getDocument("Rendering").getObject("Vishay_MOLD_3Pin").Visibility=False
+Gui.getDocument("Rendering").getObject("TO_92_Inline").Visibility=False
+Gui.getDocument("Rendering").getObject("SW_Tactile_SPST_Angled_PTS645Vx83_2LFS").Visibility=False
+Gui.getDocument("Rendering").getObject("SW_Tactile_SPST_Angled_PTS645Vx31_2LFS").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P1_90mm_Vertical002").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P1_90mm_Vertical003").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P1_90mm_Vertical001").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P1_90mm_Vertical").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0207_L6_3mm_D2_5mm_P2_54mm_Vertical").Visibility=False
+Gui.getDocument("Rendering").getObject("LED_D3_0mm_Horizontal_O1_27mm_Z2_0mm").Visibility=False
+Gui.getDocument("Rendering").getObject("LED_D3_0mm_Horizontal_O1_27mm_Z2_0mm001").Visibility=False
+Gui.getDocument("Rendering").getObject("LED_D3_0mm_Horizontal_O1_27mm_Z2_0mm002").Visibility=False
+Gui.getDocument("Rendering").getObject("LED_D5_0mm_Horizontal_O1_27mm_Z3_0mm_IRBlack").Visibility=False
+Gui.getDocument("Rendering").getObject("Buzzer_15x7_5RM7_6").Visibility=False
+
+# set view correctly
+Gui.activeDocument().activeView().viewTop()
+Gui.SendMsgToActiveView("ViewFit")
+
+# create images
+Gui.getDocument("Rendering").getObject("PinHeader_2x05_P2_54mm_Vertical").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>01.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("C_Disc_D3_0mm_W2_0mm_P2_50mm001").Visibility=True
+Gui.getDocument("Rendering").getObject("C_Disc_D3_0mm_W2_0mm_P2_50mm").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>02.jpeg',1000,1300,'Current')
+#Gui.getDocument("Rendering").getObject("PinHeader_1x02_P2_54mm_Vertical").Visibility=True
+#Gui.activeDocument().activeView().saveImage('<your path for export>03.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("PinHeader_1x14_P2_54mm_Vertical").Visibility=True
+Gui.getDocument("Rendering").getObject("PinHeader_1x14_P2_54mm_Vertical001").Visibility=True
+Gui.getDocument("Rendering").getObject("PinHeader_1x05_P2_54mm_Vertical").Visibility=True
+Gui.getDocument("Rendering").getObject("CIRCUIT_BOARD_TEENSY_LC_NO_MARKINGS").Visibility=True
+Gui.getDocument("Rendering").getObject("MPX7007").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>06.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("CUI_SJ_3524_SMT_TR").Visibility=True
+Gui.getDocument("Rendering").getObject("CUI_SJ_3524_SMT_TR001").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>07.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("R_Array_SIP5").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>08.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("R_Array_SIP5001").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>09.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("DIP_8_W7_62mm").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>10.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("Vishay_MOLD_3Pin").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>11.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("TO_92_Inline").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>12.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("SW_Tactile_SPST_Angled_PTS645Vx83_2LFS").Visibility=True
+Gui.getDocument("Rendering").getObject("SW_Tactile_SPST_Angled_PTS645Vx31_2LFS").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>13.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P1_90mm_Vertical002").Visibility=True
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P1_90mm_Vertical003").Visibility=True
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P1_90mm_Vertical001").Visibility=True
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P1_90mm_Vertical").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>14.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0207_L6_3mm_D2_5mm_P2_54mm_Vertical").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>15.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("LED_D3_0mm_Horizontal_O1_27mm_Z2_0mm").Visibility=True
+Gui.getDocument("Rendering").getObject("LED_D3_0mm_Horizontal_O1_27mm_Z2_0mm001").Visibility=True
+Gui.getDocument("Rendering").getObject("LED_D3_0mm_Horizontal_O1_27mm_Z2_0mm002").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>16.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("LED_D5_0mm_Horizontal_O1_27mm_Z3_0mm_IRBlack").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>17.jpeg',1000,1300,'Current')
+Gui.getDocument("Rendering").getObject("Buzzer_15x7_5RM7_6").Visibility=True
+Gui.activeDocument().activeView().saveImage('<your path for export>18.jpeg',1000,1300,'Current')
+# Macro End: <your path for export>FreeCAD_Macro/FM2_assembly.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++

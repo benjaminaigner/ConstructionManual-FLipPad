@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name teensy)(type Legacy)(uri ${KIPRJMOD}/libs/teensy.lib)(options "")(descr ""))
+  (lib (name FLipMouse_Mainboard-rescue)(type Legacy)(uri ${KIPRJMOD}/FLipMouse_Mainboard-rescue.lib)(options "")(descr ""))
+  (lib (name FLipMouse_custom)(type Legacy)(uri ${KIPRJMOD}/libs/FLipMouse_customLib.lib)(options "")(descr ""))
+  (lib (name DPS310)(type Legacy)(uri ${KIPRJMOD}/libs/DPS310.lib)(options "")(descr ""))
+)
